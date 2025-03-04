@@ -1,0 +1,22 @@
+  <h2>
+    <%= @task.title %>
+
+  </h2>
+
+  <div>
+    <p>
+      <%= @task.details %>
+    </p>
+  </div>
+
+  <div>
+    <p>
+      <%= @message %>
+    </p>
+  </div>
+
+  <h4>
+     <%= link_to "Edit", edit_tasks_path(@task)%>
+    <%= link_to "Back to list", tasks_path%>
+     <%= link_to "Delete", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}%>
+  </h4>
